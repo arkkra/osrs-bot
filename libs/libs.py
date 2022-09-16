@@ -2,14 +2,14 @@ import mouse
 import random
 import time
 
-from models import Sleep
+from models.models import Sleep
 
-def random_sleep(sleep: Sleep):
+def random_sleep(sleep: Sleep=Sleep()):
     if sleep.time:
         rand = random.uniform(0, sleep.delay)
         time.sleep(sleep.time + rand)
 
-def move(x: int, y: int)
+# def move(x: int, y: int)
 
 def click(sleep: Sleep=Sleep()):
     mouse.click()

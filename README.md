@@ -1,2 +1,3 @@
 # osrs-bot
-My attempt at botting
+
+My attempt at botting with python
