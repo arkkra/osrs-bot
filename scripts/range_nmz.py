@@ -22,7 +22,6 @@ class RangeNMZ(BaseScript):
         pass 
 
     def click_locator(self):
-        print('locatoring')
         # hardcoded locator position bottom right. can do detection later
         x, y = get_random_coordinate_within_circle(1445, 840, 7)
         move(x, y)
@@ -33,7 +32,6 @@ class RangeNMZ(BaseScript):
         click()
 
     def click_potion(self):
-        print('potioning')
         potion_number = int(math.floor(self.potion_counter / 4))
         if potion_number == 8:
             return
