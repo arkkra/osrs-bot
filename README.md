@@ -12,7 +12,7 @@ cd osrs-bot
 python3 -m venv .
 ```
 
-Activate the environment and install the dependencies
+Activate the environment and install the dependencies:
 
 ```bash
 source bin/activate
@@ -20,8 +20,6 @@ pip install -r requirements.txt
 ```
 
 ## Running the app
-
-Run the app with
 
 ```bash
 python autoclicker.py
