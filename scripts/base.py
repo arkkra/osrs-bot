@@ -4,15 +4,18 @@ class BaseScript(object):
     __metaclass__ = ABCMeta
 
     @abstractmethod
-    def position(self):
+    def pre(self):
         pass
 
     @abstractmethod
     def do(self):
-        pass 
+        pass
+
+    @abstractmethod
+    def post(self):
+        pass
 
     def run(self):
-        self.position()
-        # figure out a way to stop??
-        while True:
-            self.do()
+        self.pre()
+        self.do()   
+        self.post()
