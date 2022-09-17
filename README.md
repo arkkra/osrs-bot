@@ -19,7 +19,9 @@ source bin/activate
 pip install -r requirements.txt
 ```
 
-## Running the app
+## Run the app
+
+Make sure you've activated your venv. Run the app:
 
 ```bash
 python autoclicker.py
