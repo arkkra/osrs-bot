@@ -4,7 +4,12 @@ import time
 import math
 from threading import Timer
 
-from models import Sleep
+
+class Sleep:
+    def __init__(self, time=.2, delay=.3):
+        self.time = time
+        self.delay = delay
+
 
 class RepeatTimer(Timer):
     def __init__(self, interval, function, delay=None, immediate_first=False, args=None, kwargs=None):
@@ -18,6 +23,7 @@ class RepeatTimer(Timer):
                                      else self.interval + random.uniform(0, self.delay)):
             self.count += 1
             self.function(*self.args, **self.kwargs)
+
 
 def random_sleep(sleep: Sleep=Sleep()):
     if sleep.time:

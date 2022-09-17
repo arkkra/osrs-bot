@@ -1,9 +1,8 @@
 import math
 
 from .base import BaseScript
-from models import Sleep
-from utils import get_random_coordinate_within_circle, move, \
-    click, random_sleep, RepeatTimer
+from utils import Sleep, RepeatTimer, get_random_coordinate_within_circle, \
+    move, click, random_sleep
 
 # AFK NMZ Range Script
 # This assumes an inventory of 8 ranging potions, 19 absorbs, and 1 locator orb in that order

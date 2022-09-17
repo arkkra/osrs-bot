@@ -1,6 +1,5 @@
 from .base import BaseScript
-from utils import click, random_sleep
-from models import Sleep
+from utils import Sleep, click, random_sleep
 
 class HighAlch(BaseScript):
     def pre(self):
