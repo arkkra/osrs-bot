@@ -34,7 +34,7 @@ def get_distance(x1: int, y1: int, x2: int, y2: int):
 def move(x: int, y: int):
     # this sucks
     baseline = 150
-    
+
     cur_x, cur_y = mouse.get_position()
     distance = get_distance(x, y, cur_x, cur_y)
     mouse.move(x, y, absolute=True, duration=(.04 * (distance/baseline)), steps_per_second=120.0)
@@ -54,4 +54,4 @@ def get_random_coordinate_within_circle(x: int, y: int, radius: int):
     theta = random.uniform(0, 1) * 2 * math.pi
     xx = x + r * math.cos(theta)
     yy = y + r * math.sin(theta)
-    return  xx, yy
+    return xx, yy
