@@ -2,7 +2,7 @@ import math
 
 from .base import BaseScript
 from models import Sleep
-from libs import get_random_coordinate_within_circle, move, \
+from utils import get_random_coordinate_within_circle, move, \
     click, random_sleep, RepeatTimer
 
 # AFK NMZ Range Script

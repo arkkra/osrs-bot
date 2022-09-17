@@ -1,5 +1,5 @@
 from .base import BaseScript
-from libs import click, random_sleep
+from utils import click, random_sleep
 from models import Sleep
 
 class HighAlch(BaseScript):
