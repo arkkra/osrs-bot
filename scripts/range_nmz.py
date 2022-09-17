@@ -44,7 +44,6 @@ class RangeNMZ(BaseScript):
         click()
         self.potion_counter += 1
 
-
     def do(self):
         self.potion_timer.start()
         random_sleep(sleep=Sleep(time=1))

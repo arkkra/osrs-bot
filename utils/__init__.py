@@ -39,9 +39,9 @@ def move(x: int, y: int):
     distance = get_distance(x, y, cur_x, cur_y)
     mouse.move(x, y, absolute=True, duration=(.04 * (distance/baseline)), steps_per_second=120.0)
 
-def click(sleep: Sleep=Sleep()):
+def click():
     mouse.click()
-    random_sleep(sleep)
+    random_sleep()
     mouse.release()
 
 def get_random_coordinate_within_box(x: int, y: int, dx: int, dy: int):
