@@ -1,6 +1,7 @@
 
 from scripts.high_alch import HighAlch
 from scripts.range_nmz import RangeNMZ
+from scripts.ardy_knight import ArdyKnight
 
 def select_script(scripts: list):
     print('Which bot are you running?')
@@ -22,6 +23,10 @@ if __name__ == '__main__':
         {
             'name': 'Range NMZ',
             'script': RangeNMZ
+        },
+        {
+            'name': 'Ardy Knight',
+            'script': ArdyKnight
         }
     ]
 

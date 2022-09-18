@@ -28,7 +28,8 @@ class BaseScript(object):
                 key))
 
     def _key_released(self, key):
-        if key.char == '`':
+        print(key)
+        if key == keyboard.Key.esc:
             self.stop = not self.stop
 
     @abstractmethod
