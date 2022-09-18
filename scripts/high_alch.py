@@ -8,8 +8,12 @@ class HighAlch(BaseScript):
     def post(self):
         pass
 
+    def stop_pressed(self):
+        if self.stop():
+            print('bro we stopped yo')
+
     def do(self):
-        while True:
+        while True and not self.stop():
             click()
             random_sleep(Sleep(time=1.33, delay=.36))
 

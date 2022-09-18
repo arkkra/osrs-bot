@@ -8,6 +8,7 @@ from utils import Sleep, RepeatTimer, get_random_coordinate_within_circle, \
 # This assumes an inventory of 8 ranging potions, 19 absorbs, and 1 locator orb in that order
 class RangeNMZ(BaseScript):
     def __init__(self):
+        super().__init__()
         self.potion_cycle = Sleep(time=420, delay=60)
         self.locator_orb_cycle = Sleep(time=69, delay=30)
         self.potion_timer = RepeatTimer(420, self.click_potion, delay=60, immediate_first=True)
@@ -42,10 +43,22 @@ class RangeNMZ(BaseScript):
         move(x,y)
         click()
         self.potion_counter += 1
+    
+    def stop_pressed(self):
+        if self.stop:
+            self.potion_timer.cancel()
+            self.locator_timer.cancel()
+        if not self.stop:
+            self.potion_timer = RepeatTimer(420, self.click_potion, delay=6)
+            self.potion_timer.start()
+            random_sleep(sleep=Sleep(time=1))
+            self.locator_timer = RepeatTimer(69, self.click_locator, delay=30)
+            self.locator_timer.start()
 
     def do(self):
         self.potion_timer.start()
         random_sleep(sleep=Sleep(time=1))
         self.locator_timer.start()
+        self.listener.join()
         
         
