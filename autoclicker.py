@@ -2,13 +2,14 @@
 from scripts.high_alch import HighAlch
 from scripts.range_nmz import RangeNMZ
 from scripts.ardy_knight import ArdyKnight
+from scripts.clicker import Clicker
 
 def select_script(scripts: list):
     print('Which bot are you running?')
     for i, s in enumerate(scripts):
         print(str(i + 1) + '. ' + s['name'])
     
-    selected = input()
+    selected = input(f"select (1-{len(scripts)}): ")
     return selected
 
 if __name__ == '__main__':
@@ -27,6 +28,10 @@ if __name__ == '__main__':
         {
             'name': 'Ardy Knight',
             'script': ArdyKnight
+        },
+        {
+            'name': 'Clicker',
+            'script': Clicker
         }
     ]
 
