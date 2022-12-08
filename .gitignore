@@ -2,3 +2,10 @@ bin/
 include/
 lib/
 pyvenv.cfg
+autoclicker.spec
+build/
+dist/
+lib64
+scripts/__pycache__/
+utils/__pycache__/
+share/
